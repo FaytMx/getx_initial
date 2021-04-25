@@ -5,11 +5,11 @@ import 'package:getx_patter_demo/app/data/repositories/authentication_repository
 
 class DependencyInjection {
   static void init() {
-    Get.lazyPut(
+    Get.lazyPut<Dio>(
         () => Dio(BaseOptions(baseUrl: "https://api.themoviedb.org/3")));
 
-    Get.lazyPut(() => AuthenticationAPI());
+    Get.lazyPut<AuthenticationAPI>(() => AuthenticationAPI());
 
-    Get.lazyPut(() => AuthenticationRepository());
+    Get.lazyPut<AuthenticationRepository>(() => AuthenticationRepository());
   }
 }
