@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:getx_patter_demo/app/modules/splash/splash_binding.dart';
 import 'package:getx_patter_demo/app/modules/splash/splash_page.dart';
 import 'package:getx_patter_demo/app/routes/app.page.dart';
+import 'package:getx_patter_demo/app/utils/dependency_injection.dart';
 
 void main() {
+  DependencyInjection.init();
   runApp(MyApp());
 }
 
