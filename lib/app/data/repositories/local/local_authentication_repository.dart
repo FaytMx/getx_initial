@@ -9,4 +9,6 @@ class LocalAuthRepository {
       _localAuth.setSession(requestToken);
 
   Future<RequestToken> get session => _localAuth.getSession();
+
+  Future<void> clearSession() => _localAuth.clearSession();
 }

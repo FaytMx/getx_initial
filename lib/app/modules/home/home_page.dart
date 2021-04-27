@@ -9,6 +9,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(
         builder: (_) => Scaffold(
+              appBar: AppBar(
+                actions: [
+                  IconButton(icon: Icon(Icons.exit_to_app), onPressed: _.logOut)
+                ],
+              ),
               body: Container(
                   color: Colors.transparent,
                   height: double.infinity,

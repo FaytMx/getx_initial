@@ -27,4 +27,8 @@ class LocalAuth {
 
     return null;
   }
+
+  Future<void> clearSession() async {
+    await _storage.delete(key: KEY);
+  }
 }
