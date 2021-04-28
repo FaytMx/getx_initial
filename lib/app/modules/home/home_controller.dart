@@ -27,6 +27,7 @@ class HomeController extends GetxController {
   Future<void> _load() async {
     try {
       _movies = await _moviesRepository.getTopMovies();
+      print(_movies.length);
       update();
     } catch (e) {
       print(e);
